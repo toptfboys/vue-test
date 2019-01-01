@@ -42,7 +42,6 @@ export default {
             this.$http.get('api/getnew/'+this.id).then(result => {
                 if(result.body.status === 0){
                     this.newsinfo = result.body.message[0]//返回数据成功
-                    console.log(this.newsinfo);
                 }else{
                     Toast('获取新闻失败！')  //获取数据失败
                 }
